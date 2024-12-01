@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">LINC_SADAJU</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_chat">Chat</string>
+    <string name="title_mypage">My Page</string>
+
+    <!-- Hardcoded -->
+    <!-- fragment_mypage.xml -->
+    <string name="email_text">Email  </string>
+    <string name="edit_profile">프로필 편집</string>
+    <string name="recentSeenProduct_text">최근 본 상품</string>
+    <string name="recentSeenProduct_button">전체 >> </string>
+    <string name="writing_button">작성한 글</string>
+    <string name="exchangeList_button">거래 목록</string>
+    <string name="service">고객 센터</string>
+    <string name="logout_button">로그아웃</string>
+    <string name="deleteUser_button">회원 탈퇴</string>
+
+    <!-- for_customer.xml -->
+    <string name="question_button">1:1 문의</string>
+    <string name="report_button">신고</string>
+
+    <!-- onebyone_inquiry.xml -->
+    <string name="inquiry_text">문의 내용</string>
+
+    <!-- edit_inquiry.xml -->
+    <string name="inquiry_Images">Inquiry Image</string>
+    <string name="edit_images">기존 게시물 사진</string>
+    <string name="edit_text">기존 게시물 내용</string>
+    <string name="input_text">내용을 입력하세요</string>
+
+
+    <!-- fragment_mypage.xml -->
+    <string name="user_image_description">사용자 프로필 이미지</string>
+    <string name="nickname">Nickname</string>
+
+</resources>
