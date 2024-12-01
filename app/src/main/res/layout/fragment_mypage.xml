@@ -127,10 +127,9 @@
         android:layout_height="wrap_content"
         app:menu="@menu/bottom_nav_menu" />
 
-    <!-- ScrollView 외부에 위치한 Fragment 컨테이너 -->
-    <fragment
+    <!-- FragmentContainerView를 사용한 Fragment 컨테이너 -->
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment_activity_main"
-        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:defaultNavHost="true"
