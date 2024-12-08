@@ -30,6 +30,8 @@
     <string name="edit_text">기존 게시물 내용</string>
     <string name="input_text">내용을 입력하세요</string>
 
+    <!-- trade_list.xml -->
+    <string name="recently_trade">최근 거래 목록</string>
 
     <!-- fragment_mypage.xml -->
     <string name="user_image_description">사용자 프로필 이미지</string>

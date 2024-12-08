@@ -1,11 +1,17 @@
 package com.cookandroid.linc_sadaju;
 
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,10 +21,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TransList extends AppCompatActivity {
+public class Trade extends AppCompatActivity {
+
+    private TextView tvTitle;
+    private RecyclerView recyclerView;
+    private ListView tradeListView;
+    private ArrayList<String> tradeList;
+    private ArrayAdapter<String> adapter;
 
     private List<String> transactionList = new ArrayList<>();
-    private TransactionAdapter adapter;
+    private TransactionAdapter transactionAdapter;
     private boolean isLoading = false;
     private int currentPage = 1;
     private static final int PAGE_SIZE = 20;
@@ -26,16 +38,40 @@ public class TransList extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.transaction_list);
+        setContentView(R.layout.trade_list);
 
-        RecyclerView recyclerView = findViewById(R.id.rvTransactions);
+        tvTitle = findViewById(R.id.tvTitle);
+        recyclerView = findViewById(R.id.tradeList);
+
+        tradeListView = new ListView(this);
+        tradeList = new ArrayList<>();
+
+        // 샘플 거래 목록 데이터
+        tradeList.add("Item 1 - Status: Success");
+        tradeList.add("Item 2 - Status: Failed");
+        tradeList.add("Item 3 - Status: Pending");
+
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, tradeList);
+        tradeListView.setAdapter(adapter);
+
+//        // 항목 클릭 시 메시지 창 연동
+//        tradeListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                String selectedItem = tradeList.get(position);
+//                Intent intent = new Intent(.this, .class);
+//                intent.putExtra("tradeItem", selectedItem);
+//                startActivity(intent);
+//            }
+//        });
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // 초기 데이터 로드
         loadTransactions(currentPage);
 
-        adapter = new TransactionAdapter(transactionList);
-        recyclerView.setAdapter(adapter);
+        transactionAdapter = new TransactionAdapter(transactionList);
+        recyclerView.setAdapter(transactionAdapter);
 
         // 무한 스크롤 리스너 추가
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -70,7 +106,7 @@ public class TransList extends AppCompatActivity {
         new Handler().postDelayed(() -> {
             int startSize = transactionList.size();
             loadTransactions(page);
-            adapter.notifyItemRangeInserted(startSize, PAGE_SIZE);
+            transactionAdapter.notifyItemRangeInserted(startSize, PAGE_SIZE);
             isLoading = false;
         }, 1500); // 1.5초 지연
     }

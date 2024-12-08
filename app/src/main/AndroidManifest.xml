@@ -35,7 +35,7 @@
             android:name=".Editor"
             android:exported="true" />
         <activity
-            android:name=".TransList"
+            android:name=".Trade"
             android:exported="true" />
         <activity
             android:name=".OnebyoneInquiry"

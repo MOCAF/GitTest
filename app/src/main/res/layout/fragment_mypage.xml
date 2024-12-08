@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".ui.mypage.MyPageFragment">
 
-    <!-- 스크롤 가능한 콘텐츠 영역 -->
+    <!-- ScrollView 콘텐츠 영역 -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -32,7 +32,7 @@
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:contentDescription="@string/user_image_description"
-                    android:src="@drawable/ic_user_black_24dp"
+                    android:srcCompat="@drawable/ic_user_black_24dp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
@@ -116,23 +116,23 @@
                     android:layout_marginTop="8dp"
                     android:text="@string/deleteUser_button" />
             </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
 
-    <!-- ScrollView 외부에 위치한 하단 네비게이션 뷰 -->
+    <!-- FragmentContainerView -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment_activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/mobile_navigation" />
+
+    <!-- BottomNavigationView -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/bottom_nav_menu" />
-
-    <!-- FragmentContainerView를 사용한 Fragment 컨테이너 -->
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/nav_host_fragment_activity_main"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/mobile_navigation" />
 
 </LinearLayout>
