@@ -32,7 +32,7 @@
                     android:layout_width="80dp"
                     android:layout_height="100dp"
                     android:contentDescription="@string/user_image_description"
-                    android:srcCompat="@drawable/ic_user_black_24dp"
+                    android:src="@drawable/ic_user_black_24dp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 

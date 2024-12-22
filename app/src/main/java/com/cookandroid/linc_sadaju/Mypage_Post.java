@@ -98,10 +98,6 @@ public class Mypage_Post extends AppCompatActivity {
             return title;
         }
 
-        public void setTitle(String title) {
-            this.title = title;
-        }
-
         public String getDescription() {
             return description;
         }

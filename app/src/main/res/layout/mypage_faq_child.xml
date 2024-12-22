@@ -1,6 +1,5 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/customer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,12 +16,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="5dp"
-            android:paddingRight="10dp"
+            android:paddingEnd="10dp"
             android:paddingBottom="5dp"
             android:textSize="14sp"
-            android:text="answer"/>
+            android:text="@string/answer"/>
 
 
     </LinearLayout>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

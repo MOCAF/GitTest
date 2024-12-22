@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ForCustomer extends AppCompatActivity {
+public class MyPage_ForCustomer extends AppCompatActivity {
     Button question, report;
     ExpandableListView expandableListView;
     List<String> listGroup;
@@ -42,20 +42,20 @@ public class ForCustomer extends AppCompatActivity {
 
         // Question 버튼 클릭 리스너
         question.setOnClickListener(view -> {
-            Intent intent = new Intent(ForCustomer.this, Mypage_OnebyoneInquiry.class);
+            Intent intent = new Intent(MyPage_ForCustomer.this, Mypage_OnebyoneInquiry.class);
             startActivity(intent);
         });
 
         // Report 버튼 클릭 리스너
         report.setOnClickListener(view -> {
-            EditText inputReport = new EditText(ForCustomer.this);
+            EditText inputReport = new EditText(MyPage_ForCustomer.this);
 
-            AlertDialog.Builder builderRpt = new AlertDialog.Builder(ForCustomer.this);
+            AlertDialog.Builder builderRpt = new AlertDialog.Builder(MyPage_ForCustomer.this);
             builderRpt.setTitle("신고 내용을 작성해 보세요.");
             builderRpt.setView(inputReport);
             builderRpt.setPositiveButton("OK", (dialog, which) -> {
                 String userInput = inputReport.getText().toString();
-                Toast.makeText(ForCustomer.this, "당신의 신고를 확인했습니다! ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MyPage_ForCustomer.this, "당신의 신고를 확인했습니다! ", Toast.LENGTH_SHORT).show();
             });
 
             builderRpt.setNegativeButton("Cancel", (dialog, which) -> dialog.cancel());

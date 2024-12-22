@@ -36,7 +36,7 @@ public class MyPage extends AppCompatActivity {
 
         // 고객 센터
         service.setOnClickListener(v -> {
-            Intent intent = new Intent(MyPage.this, ForCustomer.class);
+            Intent intent = new Intent(MyPage.this, MyPage_ForCustomer.class);
             startActivity(intent);
         });
 

@@ -44,6 +44,7 @@
         android:hint="@string/input_text"
         android:inputType="text"
         android:layout_marginTop="8dp"
-        android:importantForAccessibility="yes" />
+        android:importantForAccessibility="yes"
+        android:importantForAutofill="no" />
 
 </LinearLayout>
