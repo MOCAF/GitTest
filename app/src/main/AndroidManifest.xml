@@ -13,9 +13,10 @@
         android:theme="@style/Theme.LINC_SADAJU"
         tools:targetApi="34">
         <activity
-            android:name=".Mypage_MainActivity"
+            android:name=".my_page.MyPage_MainActivity"
             android:exported="true"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:textColor="@color/black">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,22 +24,25 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Mypage_RecentSeenProduct"
+            android:name=".my_page.MyPage_RecentSeenProduct"
             android:exported="true" />
         <activity
-            android:name=".MyPage_ForCustomer"
+            android:name=".my_page.MyPage_ForCustomer"
             android:exported="true" />
         <activity
-            android:name=".Mypage_Post"
+            android:name=".my_page.MyPage_Post"
             android:exported="true" />
         <activity
-            android:name=".Mypage_Editor"
+            android:name=".my_page.MyPage_Editor"
             android:exported="true" />
         <activity
-            android:name=".Mypage_Trade"
+            android:name=".my_page.MyPage_Trade"
             android:exported="true" />
         <activity
-            android:name=".Mypage_OnebyoneInquiry"
+            android:name=".my_page.MyPage_OnebyoneInquiry"
+            android:exported="true" />
+        <activity
+            android:name=".my_page.MyPage"
             android:exported="true" />
     </application>
 

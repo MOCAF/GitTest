@@ -1,16 +1,16 @@
-package com.cookandroid.linc_sadaju.ui.mypage;
+package com.cookandroid.linc_sadaju.my_page.ui.home;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class MyPageViewModel extends ViewModel {
+public class HomeViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public MyPageViewModel() {
+    public HomeViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("");
+        mText.setValue("This is home fragment");
     }
 
     public LiveData<String> getText() {

@@ -1,4 +1,4 @@
-package com.cookandroid.linc_sadaju;
+package com.cookandroid.linc_sadaju.my_page;
 
 
 import android.os.Bundle;
@@ -6,19 +6,21 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.cookandroid.linc_sadaju.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Mypage_Trade extends AppCompatActivity {
+public class MyPage_Trade extends AppCompatActivity {
 
     private TextView tvTitle;
     private RecyclerView recyclerView;

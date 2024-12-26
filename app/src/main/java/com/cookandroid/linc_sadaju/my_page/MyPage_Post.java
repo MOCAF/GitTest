@@ -1,4 +1,4 @@
-package com.cookandroid.linc_sadaju;
+package com.cookandroid.linc_sadaju.my_page;
 
 import android.content.Context;
 import android.content.Intent;
@@ -24,10 +24,12 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.cookandroid.linc_sadaju.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Mypage_Post extends AppCompatActivity {
+public class MyPage_Post extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private PostAdapter postAdapter;
@@ -154,7 +156,7 @@ public class Mypage_Post extends AppCompatActivity {
 
             // ImageButton functionality for changing the image
             holder.changeImageButton.setOnClickListener(v -> {
-                ((Mypage_Post) context).openImageChooser(holder.imageView);
+                ((MyPage_Post) context).openImageChooser(holder.imageView);
             });
         }
 
@@ -183,7 +185,7 @@ public class Mypage_Post extends AppCompatActivity {
             }
 
             // Image click to select a new image
-            selectedImage.setOnClickListener(v -> ((Mypage_Post) context).openImageChooser(selectedImage));
+            selectedImage.setOnClickListener(v -> ((MyPage_Post) context).openImageChooser(selectedImage));
 
             // AlertDialog
             new AlertDialog.Builder(context)

@@ -1,4 +1,4 @@
-package com.cookandroid.linc_sadaju;
+package com.cookandroid.linc_sadaju.my_page;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -12,6 +12,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.cookandroid.linc_sadaju.R;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -22,7 +24,7 @@ public class MyPage_ForCustomer extends AppCompatActivity {
     ExpandableListView expandableListView;
     List<String> listGroup;
     Map<String, List<String>> listItem;
-    Mypage_FAQAdapter adapter;
+    MyPage_FAQAdapter adapter;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -36,13 +38,13 @@ public class MyPage_ForCustomer extends AppCompatActivity {
         expandableListView = findViewById(R.id.expandableListView);
         listGroup = new ArrayList<>();
         listItem = new HashMap<>();
-        adapter = new Mypage_FAQAdapter((Context) this, listGroup, (HashMap<String, List<String>>) listItem);
+        adapter = new MyPage_FAQAdapter((Context) this, listGroup, (HashMap<String, List<String>>) listItem);
         expandableListView.setAdapter(adapter);
         initListData();
 
         // Question 버튼 클릭 리스너
         question.setOnClickListener(view -> {
-            Intent intent = new Intent(MyPage_ForCustomer.this, Mypage_OnebyoneInquiry.class);
+            Intent intent = new Intent(MyPage_ForCustomer.this, MyPage_OnebyoneInquiry.class);
             startActivity(intent);
         });
 
@@ -67,23 +69,34 @@ public class MyPage_ForCustomer extends AppCompatActivity {
         listGroup.clear();
         listItem.clear();
 
-        listGroup.add("문제 1");
-        listGroup.add("문제 2");
-        listGroup.add("문제 3");
+        listGroup.add("Q. 거래는 어떻게 진행되나요?");
+        listGroup.add("Q. 결제 취소는 어떻게 하나요?");
+        listGroup.add("Q. 거래 중 문제가 발생했어요.");
+        listGroup.add("Q. 자주 묻는 질문(FAQ)에서 해결되지 않으면 어떻게 하나요?");
+        listGroup.add("Q. 배송이 지연되면 어떻게 해야 하나요?");
+
 
 
         List<String> problem1 = new ArrayList<>();
-        problem1.add("답1");
+        problem1.add("A. 구매자가 상품을 선택하여 판매자와 채팅하거나, 결제 및 배송을 통해 거래를 진행합니다.");
 
         List<String> problem2 = new ArrayList<>();
-        problem2.add("답2");
+        problem2.add("A. 구매 후 24시간 이내에 결제를 취소할 수 있으며, 취소는 마이페이지 → 주문 내역에서 가능합니다.");
 
         List<String> problem3 = new ArrayList<>();
-        problem3.add("답3");
+        problem3.add("A. 마이페이지 → 고객센터를 통해 신고하거나 문의를 접수할 수 있습니다.");
+
+        List<String> problem4 = new ArrayList<>();
+        problem4.add("A. 마이페이지 → 고객센터 → 1:1문의를 통해 상세한 도움을 요청하세요.");
+
+        List<String> problem5 = new ArrayList<>();
+        problem5.add("A. 배송이 예정 시간을 초과하면 고객센터로 문의하시거나 판매자와 채팅을 통해 확인할 수 있습니다.");
 
         listItem.put(listGroup.get(0), problem1);
         listItem.put(listGroup.get(1), problem2);
         listItem.put(listGroup.get(2), problem3);
+        listItem.put(listGroup.get(3), problem4);
+        listItem.put(listGroup.get(4), problem5);
 
         adapter.notifyDataSetChanged();  // 데이터 변경을 어댑터에 알림
     }

@@ -1,4 +1,4 @@
-package com.cookandroid.linc_sadaju;
+package com.cookandroid.linc_sadaju.my_page;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,16 +7,18 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
+import com.cookandroid.linc_sadaju.R;
+
 import java.util.HashMap;
 import java.util.List;
 
-public class Mypage_FAQAdapter extends BaseExpandableListAdapter {
+public class MyPage_FAQAdapter extends BaseExpandableListAdapter {
 
     private Context context;
     private List<String> listDataHeader; // 그룹 리스트 (질문)
     private HashMap<String, List<String>> listDataChild; // 자식 리스트 (답변)
 
-    public Mypage_FAQAdapter(Context context, List<String> listDataHeader,
+    public MyPage_FAQAdapter(Context context, List<String> listDataHeader,
                              HashMap<String, List<String>> listDataChild) {
         this.context = context;
         this.listDataHeader = listDataHeader;

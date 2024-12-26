@@ -1,4 +1,4 @@
-package com.cookandroid.linc_sadaju;
+package com.cookandroid.linc_sadaju.my_page;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -7,11 +7,11 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.cookandroid.linc_sadaju.R;
+
 public class MyPage extends AppCompatActivity {
 
     Button editor, product, writing, list, service, logout, deleteUser;
-
-
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -28,9 +28,21 @@ public class MyPage extends AppCompatActivity {
         logout = findViewById(R.id.logout);         // 로그아웃 버튼
         deleteUser = findViewById(R.id.deleteUser); // 회원탈퇴
 
+        // 설정 편집
+        editor.setOnClickListener(v -> {
+            Intent intent = new Intent(MyPage.this, MyPage_Editor.class);
+            startActivity(intent);
+        });
+
         // 거래 목록
         list.setOnClickListener(v -> {
-            Intent intent = new Intent(MyPage.this, Mypage_Trade.class);
+            Intent intent = new Intent(MyPage.this, MyPage_Trade.class);
+            startActivity(intent);
+        });
+
+        // 작성한 글
+        writing.setOnClickListener(v -> {
+            Intent intent = new Intent(MyPage.this, MyPage_Post.class);
             startActivity(intent);
         });
 
@@ -40,15 +52,9 @@ public class MyPage extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // 설정 편집
-        editor.setOnClickListener(v -> {
-            Intent intent = new Intent(MyPage.this, Mypage_Editor.class);
-            startActivity(intent);
-        });
-
         // 최근 본 목록
         product.setOnClickListener(v -> {
-            Intent intent = new Intent(MyPage.this, Mypage_RecentSeenProduct.class);
+            Intent intent = new Intent(MyPage.this, MyPage_RecentSeenProduct.class);
             startActivity(intent);
         });
 

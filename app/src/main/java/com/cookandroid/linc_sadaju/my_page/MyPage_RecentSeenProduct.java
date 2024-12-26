@@ -1,4 +1,4 @@
-package com.cookandroid.linc_sadaju;
+package com.cookandroid.linc_sadaju.my_page;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -6,14 +6,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.cookandroid.linc_sadaju.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Mypage_RecentSeenProduct extends AppCompatActivity {
+public class MyPage_RecentSeenProduct extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecentlyViewedAdapter adapter;

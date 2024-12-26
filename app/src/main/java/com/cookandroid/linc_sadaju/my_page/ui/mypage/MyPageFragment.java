@@ -1,4 +1,4 @@
-package com.cookandroid.linc_sadaju.ui.chat;
+package com.cookandroid.linc_sadaju.my_page.ui.mypage;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,20 +8,18 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.cookandroid.linc_sadaju.databinding.FragmentChatBinding;
+import com.cookandroid.linc_sadaju.databinding.FragmentMypageBinding;
 
-public class ChatFragment extends Fragment {
+public class MyPageFragment extends Fragment {
 
-    private FragmentChatBinding binding;
+    private FragmentMypageBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        binding = FragmentChatBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        binding = FragmentMypageBinding.inflate(inflater, container, false);
 
-
-        return root;
+        return binding.getRoot();
     }
 
     @Override

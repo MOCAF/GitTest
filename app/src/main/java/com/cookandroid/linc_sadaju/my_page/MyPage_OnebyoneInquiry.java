@@ -1,4 +1,4 @@
-package com.cookandroid.linc_sadaju;
+package com.cookandroid.linc_sadaju.my_page;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -15,7 +15,9 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class Mypage_OnebyoneInquiry extends AppCompatActivity {
+import com.cookandroid.linc_sadaju.R;
+
+public class MyPage_OnebyoneInquiry extends AppCompatActivity {
 
     private ImageView selectedImage;
     private ActivityResultLauncher<Intent> imagePickerLauncher;
