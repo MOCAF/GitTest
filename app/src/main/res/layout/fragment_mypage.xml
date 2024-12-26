@@ -21,7 +21,7 @@
         <!-- 사용자 프로필 섹션 -->
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -129,7 +129,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:fillViewport="true"
-                    android:contentDescription="@string/recentSeenProduct"
+                    android:contentDescription="@string/scroll"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/recentSeenProduct_button">
